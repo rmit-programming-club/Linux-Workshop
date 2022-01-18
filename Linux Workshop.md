@@ -1,4 +1,3 @@
-
 # Table of Contents
 
 1.  [Why linux](#org2cf7b3c)
