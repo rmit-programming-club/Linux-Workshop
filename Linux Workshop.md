@@ -1,15 +1,18 @@
 
 # Table of Contents
 
-1.  [Why linux](#orgb349c1b)
-2.  [Virtual Machine](#org54ab192)
-3.  [Setting Up VMware](#org4e61245)
-4.  [Setting up Ubuntu](#org87b321c)
-5.  [Setting up Nginx](#org48ee284)
-6.  [Getting your own site onto NGINX](#org74afbb0)
+1.  [Why linux](#org2cf7b3c)
+2.  [Virtual Machine](#org546bbca)
+3.  [Getting ready](#org6cb1872)
+    1.  [VMware](#org03cd95c)
+    2.  [Ubuntu 20.04 LTS](#orge01b2c6)
+4.  [Setting Up VMware](#org5ce534e)
+5.  [Setting up Ubuntu](#org0ae0534)
+6.  [Setting up Nginx](#org48c20b1)
+7.  [Getting your own site onto NGINX](#org247f8f0)
 
 
-<a id="orgb349c1b"></a>
+<a id="org2cf7b3c"></a>
 
 # Why linux
 
@@ -31,7 +34,7 @@
             -   Because Linux is open source, it can be independanty audited for exploits and valunerabilities, and has a large community that can fix any issues that are found
 
 
-<a id="org54ab192"></a>
+<a id="org546bbca"></a>
 
 # Virtual Machine
 
@@ -45,7 +48,30 @@
     -   Because of these reasons, virtual machines are used for running servers, with a good enough machine running hundres of machines at once
 
 
-<a id="org4e61245"></a>
+<a id="org6cb1872"></a>
+
+# Getting ready
+
+-   Before we do the workshop you will need to do two things
+
+
+<a id="org03cd95c"></a>
+
+## VMware
+
+-   If you are using an x86 system (windows or intel mac) You can download VMware from [here](https://www.vmware.com/au/products/workstation-pro.html)
+-   if you are using Linux you can get vmware from the package vmware-workstation using your package manager
+
+
+<a id="orge01b2c6"></a>
+
+## Ubuntu 20.04 LTS
+
+-   For this workshop we will be using Ubuntu Desktop 20.04 LTS, however instructions should be the same for any other Ubuntu based Linux distro
+-   You can download the Ubuntu 20.04 LTS iso from [here](https://ubuntu.com/download/desktop)
+
+
+<a id="org5ce534e"></a>
 
 # Setting Up VMware
 
@@ -88,7 +114,7 @@
 ![img](Images/Ubuntu_1.png)
 
 
-<a id="org87b321c"></a>
+<a id="org0ae0534"></a>
 
 # Setting up Ubuntu
 
@@ -127,7 +153,7 @@
 ![img](Images/Ubuntu_6.png)
 
 
-<a id="org48ee284"></a>
+<a id="org48c20b1"></a>
 
 # Setting up Nginx
 
@@ -161,7 +187,7 @@
 -   You are now hosting a site on a linux webserver, meaning by definition you are a Linux Server admin
 
 
-<a id="org74afbb0"></a>
+<a id="org247f8f0"></a>
 
 # Getting your own site onto NGINX
 
