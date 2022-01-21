@@ -1,3 +1,7 @@
+* Before we start 
+[[file:Images/TPC.png]]
+- We want you to sign up for the programming club [[https://forms.office.com/r/Le2VPKyrYG][here
+  ]] 
 * Why linux
 [[file:Images/Tux.png]]
 - Ubunutu like distro

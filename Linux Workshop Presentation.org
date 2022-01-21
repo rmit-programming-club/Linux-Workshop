@@ -1,5 +1,9 @@
 #+title:The Programming Club Linux Workshop
 #+author:Isaac "Jelly" Hawkins
+#+HTML_HEAD: <style> img{ width: 50%; } </style>
+* Pre Workshop Business
+[[file:Images/TPC.png]]
+- The Programming Club wants you to sign up for 2022 [[https://forms.office.com/r/Le2VPKyrYG][here]]
 
 * Why use Linux for a server?
 - Linux is Free Software
