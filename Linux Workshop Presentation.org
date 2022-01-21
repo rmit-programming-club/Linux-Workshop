@@ -2,9 +2,9 @@
 #+author:Isaac "Jelly" Hawkins
 #+HTML_HEAD: <style> img{ width: 50%; } </style>
 * Pre Workshop Business
-[[file:Images/TPC.png]]
+  [[file:Images/TPC.png]]
 - The Programming Club wants you to sign up for 2022 [[https://forms.office.com/r/Le2VPKyrYG][here]]
-
+- There will be question breaks during the presentation 
 * Why use Linux for a server?
 - Linux is Free Software
   - Free to modify
@@ -80,3 +80,40 @@ sudo ufw status
 #+end_src
 - Now if we open up firefox on Ubuntu
   - go to our local host at [[https://127.0.0.1:80]], we will see Nginx running
+
+** Publishing our own site
+- Now that we have Nginx publishing an example site, we can publish our own
+- If you want to use the same site I'm using you can download it from [[https://github.com/rmit-programming-club/Linux-Workshop/blob/main/index.html][here]]
+- This example site is in what we call a tar.gz format, which we can extract using a linux utlity called tar
+- tar is used in a lot of linux systems as as the defacto way to publish many files as one file
+#+begin_src bash
+tar -xzvf website.tar.gz website
+#+end_src
+- this command has many parts
+*** untar
+#+begin_src bash
+tar -xzvf website.tar.gz website
+#+end_src
+#+end_src
+- for the command tar -xzvf website there are three main parts
+  - x means we want to untar (unzip) the file
+  - z means we want to decompress it
+  - v means we want tar to be verbose (tell us exactly what is going on)
+  - f means we want to specify an output directory
+** putting the website on Nginx
+- Nginx keeps all web content in a directory called /var/www/
+*** The unix file system
+[[file:Images/Unix Filesystem.png]]
+- Unix systems (which includes Linux) have a standard filesystem
+- the /var/ director is meant specifically to contain files that are unique to this linux instance
+  - /www/ is for web related content
+- Because of this we can easily publish our site by copying all the files in website to /var/www/
+#+begin_src bash
+sudo mv website /var/www/
+#+end_src
+- In this command we are asking the system to move (mv) the directory website to /var/www/
+* Congratulations
+- You have now created a Linux Webserver, that can be used to serve web content even in the real world
+- These tools are used to serve 23.21%[1] of the content on the web
+
+[1] https://news.netcraft.com/archives/2020/12/22/december-2020-web-server-survey.html

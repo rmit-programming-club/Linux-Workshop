@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-01-21 Fri 14:20 -->
+<!-- 2022-01-21 Fri 15:11 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>The Programming Club Linux Workshop</title>
@@ -224,33 +224,51 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orga3c51fa">1. Why use Linux for a server?</a>
+<li><a href="#orgdd09b8d">1. Pre Workshop Business</a></li>
+<li><a href="#orga9d7a08">2. Why use Linux for a server?</a>
 <ul>
-<li><a href="#org3c1afae">1.1. Most importantly&#x2026;</a></li>
-<li><a href="#org9848b6f">1.2. But what Linux distribution are we going to be using for this workshop?</a></li>
+<li><a href="#org4217aff">2.1. Most importantly&#x2026;</a></li>
+<li><a href="#org5969e1d">2.2. But what Linux distribution are we going to be using for this workshop?</a></li>
 </ul>
 </li>
-<li><a href="#orgdb95714">2. Why not Windows or Mac OS for a server?</a></li>
-<li><a href="#org3763bcc">3. One more advantage to running a Linux Web server:</a></li>
-<li><a href="#org6cbd18b">4. Why would we want to Virtualize our Web server?</a>
+<li><a href="#orgd1f4cda">3. Why not Windows or Mac OS for a server?</a></li>
+<li><a href="#orge8baf7e">4. One more advantage to running a Linux Web server:</a></li>
+<li><a href="#org97e446d">5. Why would we want to Virtualize our Web server?</a>
 <ul>
-<li><a href="#orga39437f">4.1. What Virtualization Solution are we going to be using</a></li>
+<li><a href="#org5197965">5.1. What Virtualization Solution are we going to be using</a></li>
 </ul>
 </li>
-<li><a href="#org6ee8c80">5. Package Manager</a></li>
-<li><a href="#orgef9fa1d">6. Installing Nginx</a></li>
-<li><a href="#orgb26df22">7. Setting up Nginx</a>
+<li><a href="#orgd7806ac">6. Package Manager</a></li>
+<li><a href="#orgcdf707e">7. Installing Nginx</a></li>
+<li><a href="#orgef08a79">8. Setting up Nginx</a>
 <ul>
-<li><a href="#org63b277f">7.1. Daemons</a></li>
-<li><a href="#org573cf81">7.2. Setting up Nginx (cont.)</a></li>
+<li><a href="#orgdb59d41">8.1. Daemons</a></li>
+<li><a href="#org54127d4">8.2. Setting up Nginx (cont.)</a></li>
+<li><a href="#org30d7ad0">8.3. Publishing our own site</a></li>
+<li><a href="#orge2b490c">8.4. untar</a></li>
+<li><a href="#org17f9d1b">8.5. putting the website on Nginx</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orga3c51fa" class="outline-2">
-<h2 id="orga3c51fa"><span class="section-number-2">1</span> Why use Linux for a server?</h2>
+<div id="outline-container-orgdd09b8d" class="outline-2">
+<h2 id="orgdd09b8d"><span class="section-number-2">1</span> Pre Workshop Business</h2>
 <div class="outline-text-2" id="text-1">
+
+<div id="orgbdbf7ca" class="figure">
+<p><img src="Images/TPC.png" alt="TPC.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>The Programming Club wants you to sign up for 2022 <a href="https://forms.office.com/r/Le2VPKyrYG">here</a></li>
+<li>There will be question breaks during the presentation</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga9d7a08" class="outline-2">
+<h2 id="orga9d7a08"><span class="section-number-2">2</span> Why use Linux for a server?</h2>
+<div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li>Linux is Free Software
 <ul class="org-ul">
@@ -262,9 +280,9 @@
 </ul>
 </div>
 
-<div id="outline-container-org3c1afae" class="outline-3">
-<h3 id="org3c1afae"><span class="section-number-3">1.1</span> Most importantly&#x2026;</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-org4217aff" class="outline-3">
+<h3 id="org4217aff"><span class="section-number-3">2.1</span> Most importantly&#x2026;</h3>
+<div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
 <li>Linux has a lot of software support for running web-servers
 <ul class="org-ul">
@@ -274,11 +292,11 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org9848b6f" class="outline-3">
-<h3 id="org9848b6f"><span class="section-number-3">1.2</span> But what Linux distribution are we going to be using for this workshop?</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-org5969e1d" class="outline-3">
+<h3 id="org5969e1d"><span class="section-number-3">2.2</span> But what Linux distribution are we going to be using for this workshop?</h3>
+<div class="outline-text-3" id="text-2-2">
 
-<div id="org9f7d53c" class="figure">
+<div id="org51e538d" class="figure">
 <p><img src="Images/Linux Distros.png" alt="Linux Distros.png" />
 </p>
 </div>
@@ -289,33 +307,33 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgdb95714" class="outline-2">
-<h2 id="orgdb95714"><span class="section-number-2">2</span> Why not Windows or Mac OS for a server?</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-orgd1f4cda" class="outline-2">
+<h2 id="orgd1f4cda"><span class="section-number-2">3</span> Why not Windows or Mac OS for a server?</h2>
+<div class="outline-text-2" id="text-3">
 <ul class="org-ul">
 <li>Windows and Mac OS are owned by parents companies that are restrictive with what you can do with them</li>
 <li>Windows and Mac have a lot of components that might be unnecessary for running just a web server on top</li>
 </ul>
 
-<div id="orgc7e4e8b" class="figure">
+<div id="org97b12be" class="figure">
 <p><img src="Images/Windows Server.jpg" alt="Windows Server.jpg" />
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org3763bcc" class="outline-2">
-<h2 id="org3763bcc"><span class="section-number-2">3</span> One more advantage to running a Linux Web server:</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-orge8baf7e" class="outline-2">
+<h2 id="orge8baf7e"><span class="section-number-2">4</span> One more advantage to running a Linux Web server:</h2>
+<div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li>Linux is very lightweight, which makes it easy to <b>Virtualize</b>
 <img src="Images/Virtual Server.png" alt="Virtual Server.png" /></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org6cbd18b" class="outline-2">
-<h2 id="org6cbd18b"><span class="section-number-2">4</span> Why would we want to Virtualize our Web server?</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-org97e446d" class="outline-2">
+<h2 id="org97e446d"><span class="section-number-2">5</span> Why would we want to Virtualize our Web server?</h2>
+<div class="outline-text-2" id="text-5">
 <ul class="org-ul">
 <li>Hardware costs a lot of money</li>
 <li>With Virtualization solutions, we can run many separate instances of Linux
@@ -324,9 +342,9 @@
 </ul></li>
 </ul>
 </div>
-<div id="outline-container-orga39437f" class="outline-3">
-<h3 id="orga39437f"><span class="section-number-3">4.1</span> What Virtualization Solution are we going to be using</h3>
-<div class="outline-text-3" id="text-4-1">
+<div id="outline-container-org5197965" class="outline-3">
+<h3 id="org5197965"><span class="section-number-3">5.1</span> What Virtualization Solution are we going to be using</h3>
+<div class="outline-text-3" id="text-5-1">
 <ul class="org-ul">
 <li>VMware Workstation Pro 16
 <img src="Images/VMware-16.png" alt="VMware-16.png" /></li>
@@ -337,9 +355,9 @@
 </div>
 </div>
 
-<div id="outline-container-org6ee8c80" class="outline-2">
-<h2 id="org6ee8c80"><span class="section-number-2">5</span> Package Manager</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-orgd7806ac" class="outline-2">
+<h2 id="orgd7806ac"><span class="section-number-2">6</span> Package Manager</h2>
+<div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li>Ubuntu (and other Linux distributions) use what is known as a <b>package manager</b></li>
 <li>Package Managers make it easy for system administrators to manage the software on their machines</li>
@@ -347,9 +365,9 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-orgef9fa1d" class="outline-2">
-<h2 id="orgef9fa1d"><span class="section-number-2">6</span> Installing Nginx</h2>
-<div class="outline-text-2" id="text-6">
+<div id="outline-container-orgcdf707e" class="outline-2">
+<h2 id="orgcdf707e"><span class="section-number-2">7</span> Installing Nginx</h2>
+<div class="outline-text-2" id="text-7">
 <div class="org-src-container">
 <pre class="src src-bash">sudo apt install Nginx
 </pre>
@@ -362,9 +380,9 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb26df22" class="outline-2">
-<h2 id="orgb26df22"><span class="section-number-2">7</span> Setting up Nginx</h2>
-<div class="outline-text-2" id="text-7">
+<div id="outline-container-orgef08a79" class="outline-2">
+<h2 id="orgef08a79"><span class="section-number-2">8</span> Setting up Nginx</h2>
+<div class="outline-text-2" id="text-8">
 <ul class="org-ul">
 <li>First we will check if Nginx is running using</li>
 </ul>
@@ -385,9 +403,9 @@ systemctl start Nginx
 <li>Nginx is what we call a <b>daemon</b></li>
 </ul>
 </div>
-<div id="outline-container-org63b277f" class="outline-3">
-<h3 id="org63b277f"><span class="section-number-3">7.1</span> Daemons</h3>
-<div class="outline-text-3" id="text-7-1">
+<div id="outline-container-orgdb59d41" class="outline-3">
+<h3 id="orgdb59d41"><span class="section-number-3">8.1</span> Daemons</h3>
+<div class="outline-text-3" id="text-8-1">
 <ul class="org-ul">
 <li>Daemons are programs that run in the background on our system</li>
 <li>systemctl is part of a larger software suite called systemd</li>
@@ -396,9 +414,9 @@ systemctl start Nginx
 </ul>
 </div>
 </div>
-<div id="outline-container-org573cf81" class="outline-3">
-<h3 id="org573cf81"><span class="section-number-3">7.2</span> Setting up Nginx (cont.)</h3>
-<div class="outline-text-3" id="text-7-2">
+<div id="outline-container-org54127d4" class="outline-3">
+<h3 id="org54127d4"><span class="section-number-3">8.2</span> Setting up Nginx (cont.)</h3>
+<div class="outline-text-3" id="text-8-2">
 <ul class="org-ul">
 <li>Now that we know that Nginx is running,
 <ul class="org-ul">
@@ -425,11 +443,64 @@ sudo ufw allow 'Nginx HTTP'
 </ul>
 </div>
 </div>
+
+<div id="outline-container-org30d7ad0" class="outline-3">
+<h3 id="org30d7ad0"><span class="section-number-3">8.3</span> Publishing our own site</h3>
+<div class="outline-text-3" id="text-8-3">
+<ul class="org-ul">
+<li>Now that we have Nginx publishing an example site, we can publish our own</li>
+<li>If you want to use the same site I'm using you can download it from <a href="https://github.com/rmit-programming-club/Linux-Workshop/blob/main/index.html">here</a></li>
+<li>This example site is in what we call a tar.gz format, which we can extract using a linux utlity called tar</li>
+<li>tar is used in a lot of linux systems as as the defacto way to publish many files as one file</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-bash">tar -xzvf website.tar.gz website
+</pre>
+</div>
+<ul class="org-ul">
+<li>this command has many parts</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge2b490c" class="outline-3">
+<h3 id="orge2b490c"><span class="section-number-3">8.4</span> untar</h3>
+<div class="outline-text-3" id="text-8-4">
+<ul class="org-ul">
+<li>for the command tar -xzvf website there are three main parts
+<ul class="org-ul">
+<li>x means we want to untar (unzip) the file</li>
+<li>z means we want to decompress it</li>
+<li>v means we want tar to be verbose (tell us exactly what is going on)</li>
+<li>f means we want to specify an output directory</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org17f9d1b" class="outline-3">
+<h3 id="org17f9d1b"><span class="section-number-3">8.5</span> putting the website on Nginx</h3>
+<div class="outline-text-3" id="text-8-5">
+<ul class="org-ul">
+<li>Nginx keeps all web content in a directory called <i>var/www</i></li>
+<li>the <i>var</i> director is meant specifically to contain files that are unique to this linux instance
+<ul class="org-ul">
+<li><i>www</i> is for web related content</li>
+</ul></li>
+<li>Because of this we can easily publish our site by copying all the files in website to <i>var/www</i></li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-bash">sudo mv website /var/www/
+</pre>
+</div>
+<ul class="org-ul">
+<li>In this command we are asking the system to move (mv) the directory website to <i>var/www</i></li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Isaac "Jelly" Hawkins</p>
-<p class="date">Created: 2022-01-21 Fri 14:20</p>
+<p class="date">Created: 2022-01-21 Fri 15:11</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

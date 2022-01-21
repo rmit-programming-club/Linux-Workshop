@@ -2,14 +2,14 @@
 [[file:Images/TPC.png]]
 - We want you to sign up for the programming club [[https://forms.office.com/r/Le2VPKyrYG][here
   ]] 
-* Why linux
+* Why Linux
 [[file:Images/Tux.png]]
-- Ubunutu like distro
+- Ubuntu like distro
   - Ubuntu easy to use
     - Free
     - Easy to use
     - Lots of support
-- Why is linux a good choice for servers
+- Why is Linux a good choice for servers
   - Free and Open Source (FOSS)
   - Flexible
     - You can install only the software you need
@@ -77,7 +77,7 @@
 sudo apt update
 #+END_SRC
 - *apt* is what is known as a package manager
-  - A package mangager is a tool used by linux admins to make sure that software is installed, kept up to date and mangaged properly
+  - A package mangager is a tool used by Linux admins to make sure that software is installed, kept up to date and mangaged properly
   - Package managers allow Linux servers to be configured quickly and easily
 - The system will now update apt and make sure we can install whatever packages we need to
 - A software updater message will pop up as well but we can ignore that for now
@@ -111,7 +111,7 @@ sudo ufw allow 'Nginx HTTP'
   + There should be an ip address listed under inet
 - Open a browser up on your real computer and you should see the exact same page
 [[file:Images/NGINX_2.png]]
-- You are now hosting a site on a linux webserver, meaning by definition you are a Linux Server admin
+- You are now hosting a site on a Linux webserver, meaning by definition you are a Linux Server admin
 * Getting your own site onto NGINX
 - Today we are just going to worry about static HTML sites
   - Should we prepare a HTML file for them to host
@@ -125,7 +125,7 @@ sudo mv *.html /var/www/html/
   - If you have css, image or any other kinds of files on your website use them as well (*.css, *.png/jpg/gif, *.js for example)
 - This copies it to the file where the HTML files for Nginx are kept
 - To be safe we will restart Nginx using systemd
-  - Systemd is a linux utility that is used to manage programs known as damons
+  - Systemd is a Linux utility that is used to manage programs known as damons
   - damons are background services that run utilities
 #+BEGIN_SRC bash
 sudo systemctl restart nginx
