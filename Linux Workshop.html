@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-01-19 Wed 16:37 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
+<!--/*--><![CDATA[/*><!--*/
+     function CodeHighlightOn(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.add("code-highlighted");
+         target.classList.add("code-highlighted");
+       }
+     }
+     function CodeHighlightOff(elem, id)
+     {
+       var target = document.getElementById(id);
+       if(null != target) {
+         elem.classList.remove("code-highlighted");
+         target.classList.remove("code-highlighted");
+       }
+     }
+    /*]]>*///-->
+// @license-end
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org92b57ed">1. Why linux</a></li>
+<li><a href="#org57d5e03">2. Virtual Machine</a></li>
+<li><a href="#orgf7f0f46">3. Getting ready</a>
+<ul>
+<li><a href="#org9fe2e60">3.1. VMware</a></li>
+<li><a href="#org62f2201">3.2. Ubuntu 20.04 LTS</a></li>
+</ul>
+</li>
+<li><a href="#org180394c">4. Setting Up VMware</a></li>
+<li><a href="#orgb101068">5. Setting up Ubuntu</a></li>
+<li><a href="#orge876fb1">6. Setting up Nginx</a></li>
+<li><a href="#org404100a">7. Getting your own site onto NGINX</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org92b57ed" class="outline-2">
+<h2 id="org92b57ed"><span class="section-number-2">1</span> Why linux</h2>
+<div class="outline-text-2" id="text-1">
+
+<div id="org0bd8188" class="figure">
+<p><img src="Images/Tux.png" alt="Tux.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Ubunutu like distro
+<ul class="org-ul">
+<li>Ubuntu easy to use
+<ul class="org-ul">
+<li>Free</li>
+<li>Easy to use</li>
+<li>Lots of support</li>
+</ul></li>
+</ul></li>
+<li>Why is linux a good choice for servers
+<ul class="org-ul">
+<li>Free and Open Source (FOSS)</li>
+<li>Flexible
+<ul class="org-ul">
+<li>You can install only the software you need</li>
+<li>Has lots of software that can be used to run a webserver
+<ul class="org-ul">
+<li>Apache</li>
+<li>NGNIX</li>
+</ul></li>
+<li>Security
+<ul class="org-ul">
+<li>Because Linux is open source, it can be independanty audited for exploits and valunerabilities, and has a large community that can fix any issues that are found</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org57d5e03" class="outline-2">
+<h2 id="org57d5e03"><span class="section-number-2">2</span> Virtual Machine</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>VM ware is <b>Virtual Machine Software</b>
+<ul class="org-ul">
+<li>we can run a mini computer in the virtual box</li>
+<li>This computer has a lot of the functionality of a real computer</li>
+<li>We can also
+<ul class="org-ul">
+<li>Quickly destroy a Virtual Machine</li>
+<li>Restore a virtual machine to an earlier point</li>
+<li>Run multiple Virtual Machines at the same time</li>
+</ul></li>
+<li>Because of these reasons, virtual machines are used for running servers, with a good enough machine running hundres of machines at once</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf7f0f46" class="outline-2">
+<h2 id="orgf7f0f46"><span class="section-number-2">3</span> Getting ready</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>Before we do the workshop you will need to do two things</li>
+</ul>
+</div>
+<div id="outline-container-org9fe2e60" class="outline-3">
+<h3 id="org9fe2e60"><span class="section-number-3">3.1</span> VMware</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>If you are using an x86 system (windows or intel mac) You can download VMware from <a href="https://www.vmware.com/au/products/workstation-pro.html">here</a></li>
+<li>if you are using Linux you can get vmware from the package vmware-workstation using your package manager</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org62f2201" class="outline-3">
+<h3 id="org62f2201"><span class="section-number-3">3.2</span> Ubuntu 20.04 LTS</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>For this workshop we will be using Ubuntu Desktop 20.04 LTS, however instructions should be the same for any other Ubuntu based Linux distro</li>
+<li>You can download the Ubuntu 20.04 LTS iso from <a href="https://ubuntu.com/download/desktop">here</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org180394c" class="outline-2">
+<h2 id="org180394c"><span class="section-number-2">4</span> Setting Up VMware</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>When you first setup VMware, this screen will show up
+<img src="Images/VMWare-License-Key.png" alt="VMWare-License-Key.png" /></li>
+<li>Luckily we are not going to be using VMWare for long so just select I want to try VMWare for 30 days and you'll see this screen
+<img src="Images/VMWare_interface.png" alt="VMWare_interface.png" /></li>
+<li>From here we can start our own virtual machine</li>
+</ul>
+<ul class="org-ul">
+<li>Click on create new Virtual Machine and Typical configuration</li>
+</ul>
+
+
+<div id="org0c3336e" class="figure">
+<p><img src="Images/Setup_1.png" alt="Setup_1.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Select the Ubuntu ISO we downloaded</li>
+</ul>
+
+<div id="org7e6ab66" class="figure">
+<p><img src="Images/Setup_2.png" alt="Setup_2.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Enter in details to login to the machine, for the sake of demonstration I'm going with isaactpc, feel free to use any username and password you can remember</li>
+</ul>
+
+<div id="org7e50df0" class="figure">
+<p><img src="Images/Setup_3.png" alt="Setup_3.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>If you have the space go with the default capacity, please let me know if you do not have the disk space</li>
+</ul>
+
+<div id="orgc3ab506" class="figure">
+<p><img src="Images/Setup_4.png" alt="Setup_4.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Confirm your configuration and we can finish the final steps to setup the virtual machine</li>
+</ul>
+
+<div id="orgb32457a" class="figure">
+<p><img src="Images/Setup_5.png" alt="Setup_5.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>VMWare will start the machine and you should see this screen</li>
+</ul>
+
+<div id="orgd9f0136" class="figure">
+<p><img src="Images/Setup_6.png" alt="Setup_6.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Eventually a UI will show up and let us know that Ubuntu is configuring for this hardware</li>
+</ul>
+
+<div id="orgd2db0b5" class="figure">
+<p><img src="Images/Setup_7.png" alt="Setup_7.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>After its finished setting up in VMWare, the virutal machine will restart and open into:</li>
+</ul>
+
+<div id="org4846c0c" class="figure">
+<p><img src="Images/Ubuntu_1.png" alt="Ubuntu_1.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb101068" class="outline-2">
+<h2 id="orgb101068"><span class="section-number-2">5</span> Setting up Ubuntu</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>For the sake of clarity, I am going to turn the resolution up from 480p so we can see what is going on</li>
+</ul>
+
+<div id="org3d85cb5" class="figure">
+<p><img src="Images/Ubuntu_2.png" alt="Ubuntu_2.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Now that we're in Ubuntu, lets do a little test to make sure that Networking is working on our VMWare instance</li>
+<li>Open up Firefox (which is included with Ubuntu) and open up <a href="http://www.google.com">http://www.google.com</a>, if you see this screen it means that we are connected to the internet</li>
+</ul>
+
+<div id="orgce2718a" class="figure">
+<p><img src="Images/Ubuntu_3.png" alt="Ubuntu_3.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Now select the button at the top of the screen that says Activities, and search for teminal.</li>
+<li>A terminal Window should now show up on the screen like so:
+<img src="Images/Ubuntu_4.png" alt="Ubuntu_4.png" /></li>
+<li>To make sure the system is up-to-date, we have to run</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-bash">sudo apt update
+</pre>
+</div>
+<ul class="org-ul">
+<li><b>apt</b> is what is known as a package manager
+<ul class="org-ul">
+<li>A package mangager is a tool used by linux admins to make sure that software is installed, kept up to date and mangaged properly</li>
+<li>Package managers allow Linux servers to be configured quickly and easily</li>
+</ul></li>
+<li>The system will now update apt and make sure we can install whatever packages we need to</li>
+<li>A software updater message will pop up as well but we can ignore that for now</li>
+</ul>
+
+<div id="orgd0e8cb3" class="figure">
+<p><img src="Images/Ubuntu_5.png" alt="Ubuntu_5.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li><p>
+Enter into the terminal
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">sudo apt install nginx
+</pre>
+</div>
+<ul class="org-ul">
+<li>This is asking the package mangager to install a package known as <b>nginx</b></li>
+<li>nginx is what we will be using to host a website off of this virtual machine</li>
+</ul></li>
+<li>When the package manager asks if you want to continue, Type capital <b>Y</b>, and it will install the nginx to our virtual machine</li>
+</ul>
+
+<div id="org12ef1ff" class="figure">
+<p><img src="Images/Ubuntu_6.png" alt="Ubuntu_6.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orge876fb1" class="outline-2">
+<h2 id="orge876fb1"><span class="section-number-2">6</span> Setting up Nginx</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>When the installation is done, we will be back at our shell, and we can check that status of ufw with the following command</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-bash">sudo ufw status
+</pre>
+</div>
+<ul class="org-ul">
+<li>This command should have the output showing nginx is not active</li>
+</ul>
+
+<div id="org25b0bb4" class="figure">
+<p><img src="Images/Ubuntu_7.png" alt="Ubuntu_7.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>We can activate nginx with two commands</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-bash">sudo ufw enable
+sudo ufw allow 'Nginx HTTP'
+</pre>
+</div>
+
+<div id="org277d563" class="figure">
+<p><img src="Images/Ubuntu_9.png" alt="Ubuntu_9.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>These commands tell ufw to turn on and allow HTTP connections on port 80</li>
+<li>If we open up firefox again and go to <a href="http://127.0.0.1">http://127.0.0.1</a> which is our local host we will see this</li>
+</ul>
+
+<div id="org4ec5df0" class="figure">
+<p><img src="Images/NGINX_1.png" alt="NGINX_1.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Now we are offically hosting a webpage on our virtual machine</li>
+<li>To access the webpage from your real machine, type the command ip addr show into the terminal
+<ul class="org-ul">
+<li>There should be an ip address listed under inet</li>
+</ul></li>
+<li>Open a browser up on your real computer and you should see the exact same page</li>
+</ul>
+
+<div id="orgd9bea57" class="figure">
+<p><img src="Images/NGINX_2.png" alt="NGINX_2.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>You are now hosting a site on a linux webserver, meaning by definition you are a Linux Server admin</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org404100a" class="outline-2">
+<h2 id="org404100a"><span class="section-number-2">7</span> Getting your own site onto NGINX</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>Today we are just going to worry about static HTML sites
+<ul class="org-ul">
+<li>Should we prepare a HTML file for them to host</li>
+</ul></li>
+<li>Make sure your HTML file is called index.html</li>
+<li>In the terminal use cd (change directory) to navigate to the directory with your html files in it</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-bash">sudo mv *.html /var/www/html/
+</pre>
+</div>
+<ul class="org-ul">
+<li>* is whats called a wildcard, it can be used to select multiple files matching a condition
+<ul class="org-ul">
+<li>In this case the condition is a file ending in .html</li>
+<li>If you have css, image or any other kinds of files on your website use them as well (*.css, *.png/jpg/gif, *.js for example)</li>
+</ul></li>
+<li>This copies it to the file where the HTML files for Nginx are kept</li>
+<li>To be safe we will restart Nginx using systemd
+<ul class="org-ul">
+<li>Systemd is a linux utility that is used to manage programs known as damons</li>
+<li>damons are background services that run utilities</li>
+</ul></li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-bash">sudo systemctl restart nginx
+</pre>
+</div>
+<ul class="org-ul">
+<li>Now if you go to your website again, you will see it has updated with your page</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-01-19 Wed 16:37</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
