@@ -12,21 +12,67 @@
 - Linux has a lot of software support for running web-servers
   - Apache
   - Nginx
-** But what Linux are we going to be using for this workshop?
+** But what Linux distribution are we going to be using for this workshop?
 [[file:Images/Linux Distros.png]]
 - There are many different flavors of Linux
 - However today we are just going to focus on using [[https://ubuntu.com/#download][Ubuntu 20.04 LTS]]
 * Why not Windows or Mac OS for a server?
 - Windows and Mac OS are owned by parents companies that are restrictive with what you can do with them
-- Windows and Mac have a lot of components that might be unnecessay for running just a web server on top
+- Windows and Mac have a lot of components that might be unnecessary for running just a web server on top
+[[file:Images/Windows Server.jpg]]
+
 * One more advantage to running a Linux Web server:
 - Linux is very lightweight, which makes it easy to *Virtualize*
+  [[file:Images/Virtual Server.png]]
 * Why would we want to Virtualize our Web server?
 - Hardware costs a lot of money
-- With Virtualization solutions, we can run many seperate instances of Linux
+- With Virtualization solutions, we can run many separate instances of Linux
   - So we can run many web-servers on just one computer
 ** What Virtualization Solution are we going to be using
 - VMware Workstation Pro 16
      [[file:Images/VMware-16.png]]
 - Virtual Box
-- If you are using Apple M1 Silicon (A new Macbook): UTM should work
+- If you are using Apple M1 Silicon (A new Mac-book): ATM should work
+
+* Package Manager
+- Ubuntu (and other Linux distributions) use what is known as a *package manager*
+- Package Managers make it easy for system administrators to manage the software on their machines
+- Ubuntu uses *apt* as its package manager
+* Installing Nginx
+#+BEGIN_SRC bash
+sudo apt install Nginx
+#+END_SRC
+- sudo means to run it as the system administrator (or root)
+- apt is the program we are calling
+- install is the instruction
+- Nginx is the software we want to install
+* Setting up Nginx
+- First we will check if Nginx is running using
+#+begin_src bash
+systemctl status Nginx
+#+end_src
+- if it isn't running we can run
+#+begin_src bash
+systemctl enable Nginx
+systemctl start Nginx
+#+end_src
+- this will enable it to run next time we start the system and run it this time
+- Nginx is what we call a *daemon*
+** Daemons
+- Daemons are programs that run in the background on our system
+- systemctl is part of a larger software suite called systemd
+- systemd manages daemons for a system administrator
+ [[file:Images/Daemon.png]] 
+** Setting up Nginx (cont.)
+- Now that we know that Nginx is running,
+  - We can ask ubuntu's Uncomplicated Fire Wall (ufw) to let Nginx through
+#+begin_src bash
+sudo ufw enable
+sudo ufw allow 'Nginx HTTP'
+#+end_src
+- We can check if ufw is letting Nginx through
+#+begin_src bash
+sudo ufw status
+#+end_src
+- Now if we open up firefox on Ubuntu
+  - go to our local host at [[https://127.0.0.1:80]], we will see Nginx running
